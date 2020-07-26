@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: 
+        context: .
+        args:
+            FLASK_PORT: $FLASK_PORT
+    ports:
+    - "$FLASK_PORT:$FLASK_PORT"
+  redis:
+    image: "redis:alpine"
